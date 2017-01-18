@@ -1,7 +1,7 @@
 import boto3
 
 def dynamodb():
-    dynamodb = boto3.resource('dynamodb')
+    dynamodb = boto3.resource('dynamodb', region_name='us-west-2')
     table = dynamodb.Table('users')
     response = table.get_item(
         Key={
